@@ -86,7 +86,7 @@ It is important at this point to re-evaluate the best course of action to take t
                         the car someone drives?
 The ML conducted in the exploratory analysis should result in enough conclusive evidence to make a judgement of what is needed for the predictive model. </br>
 **Note:** See figure below for a diagram of the ML pipeline
-![ML Flowchart](./Images/ml_flowchart.png)
+![ML Flowchart](./Images/mlflowchart.png)
 </br></br>
 Following the ML pipeline:</br>
 X. Implement Machine Learning on Clean data</br>
