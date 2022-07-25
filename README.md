@@ -1,7 +1,7 @@
 # Year, Make, Model, Credit.
 </br> 
 </br>
-
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra?theme=dark&show_icons=true)
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There is a belief held by many, that individuals who drive more high-dollar extravagant
 #### cars ***must*** be more financially well off than the rest of us. Is there a way to find out…?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </br> 
