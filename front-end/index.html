@@ -38,9 +38,9 @@
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Car to Credit Predictor</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Does the car you drive help predict your financial health? Let's get started.</h2>
-                        <a class="btn btn-primary" href="#about">Get Started!</a>
+                        <h1 class="mx-auto my-0 text-uppercase">Year, Make, Model, Credit.</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Does the car you drive help predict your financial health?</h2>
+                        <a class="btn btn-primary" href="#about">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,22 @@
                 </div>
                 <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
             </div>
-            <label class="text-white-50" for="brand" >Choose your make:</label>
+            <label class="text-white" for="brand" >Choose your year:</label>
+            <select id='date-dropdown'>
+            </select>
+            <script>
+                let dateDropdown = document.getElementById('date-dropdown');      
+                let currentYear = new Date().getFullYear();    
+                let earliestYear = 1970;     
+                while (currentYear >= earliestYear) {      
+                    let dateOption = document.createElement('option');          
+                    dateOption.text = currentYear;      
+                    dateOption.value = currentYear;        
+                    dateDropdown.add(dateOption);      
+                    currentYear -= 1;    
+                }
+            </script>            
+            <label class="text-white" for="brand" >Choose your make:</label>
             <select name="brand" id="brand">
                     <option value="acura">Acura</option>
                     <option value="alfa romeo">Alpha Romeo</option>
@@ -109,7 +124,6 @@
                     <option value="volkswagen">Volkswagen</option>
                     <option value="volvo">Volvo</option>
             </select>
-
         </section>
         <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
