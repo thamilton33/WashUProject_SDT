@@ -4,7 +4,8 @@
 # Cars vs Credit - Predicting A Credit Score Based on Individuals Vehicle
 
 ## Dashboard
-A dashboard was created using JS to help show our users what various combinations are available depedent on make and model [Dashboard Link](https://github.com/thamilton33/WashUProject_SDT)
+A dashboard was created using JS to help show our users what various combinations are available depedent on make and model. 
+- [Dashboard Link](https://github.com/thamilton33/WashUProject_SDT)
 
 ## Table of Contents 
 
@@ -39,6 +40,7 @@ A dashboard was created using JS to help show our users what various combination
 ![](images/driver_data.png)
 
 ## Machine Learning & Machine Learning Results:
+tokenized the model to cut down on size of the data. Joined the two data sets together within Postgres. 
 
 ![](front-end/assets/img/mlflowchart.png)
 
