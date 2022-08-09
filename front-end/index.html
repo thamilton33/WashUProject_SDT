@@ -27,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Outline</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
                     </ul>
                 </div>
@@ -38,9 +38,9 @@
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Car to Credit Predictor</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Does the car you drive help predict your financial health? Let's get started.</h2>
-                        <a class="btn btn-primary" href="#about">Get Started!</a>
+                        <h1 class="mx-auto my-0 text-uppercase">Year/Make/Model/Credit.</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Does the car you drive help predict your financial health?</h2>
+                        <a class="btn btn-primary" href="#about">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -52,14 +52,31 @@
                     <div class="col-lg-8">
                         <h2 class="text-white mb-4">Select your vehicle's Year, Make, and Model.</h2>
                         <p class="text-white-50">
-                            Your specific vehicle's attributes will be cross referenced with data from other owners. 
+                            Your specific vehicle's attributes will be cross referenced with data from other owners to show you where you fall. 
                         </p>
                     </div>
                 </div>
                 <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
             </div>
-            <label class="text-white-50" for="brand" >Choose your make:</label>
+            <label class="text-white" for="year" >Choose your year:</label>
+            <select id='date-dropdown'>
+            </select>
+            <script>
+                let dateDropdown = document.getElementById('date-dropdown');      
+                let currentYear = new Date().getFullYear();    
+                let earliestYear = 2010;     
+                while (currentYear >= earliestYear) {      
+                    let dateOption = document.createElement('option');          
+                    dateOption.text = currentYear;      
+                    dateOption.value = currentYear;        
+                    dateDropdown.add(dateOption);      
+                    currentYear -= 1;    
+                }
+            </script>            
+            <label class="text-white" for="model" >Choose your Make:</label>
             <select name="brand" id="brand">
+                    <option value=""></option>
+                    <option value="acura">Acura</option>
                     <option value="acura">Acura</option>
                     <option value="alfa romeo">Alpha Romeo</option>
                     <option value="audi">Audi</option>
@@ -109,8 +126,21 @@
                     <option value="volkswagen">Volkswagen</option>
                     <option value="volvo">Volvo</option>
             </select>
-
         </section>
+        <label class="text-white" for="model" >Choose your Model:</label>
+            <select id='model-dropdown' onchange="optionChanged(this.value)"></select>
+            </select>
+            <script>
+                let modelDropdown = document.getElementById('model-dropdown');
+                let models = ['', 'ILX', 'MDX', 'NSX', 'RDX', 'RL', 'RLX', 'TL', 'TLX', 'TSX', 'ZDX'];
+                let arrayLength = models.length;     
+                for (var i=0; i < arrayLength; i++)  {      
+                    let modelOption = document.createElement('option');          
+                    modelOption.text = models[i];      
+                    modelOption.value = models[i];        
+                    modelDropdown.add(modelOption);          
+                }
+            </script>
         <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
             <div class="container px-4 px-lg-5">
@@ -120,7 +150,7 @@
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Data Pipeline</h4>
-                            <p class="text-black-50 mb-0">Your vehicles Year, Make, and Model are used to query a database of over 30 million unique data points. All data for vehicles matching yours will then be sent to our training and prediction program.</p>
+                            <p class="text-black-50 mb-0">Your vehicles Year, Make, and Model are used to show you the demographics for other owners. All data for vehicles matching yours is used to run a linear regression model. This model will show you the demographics for those who own your specific vehicle to help you find where you fall among them.</p>
                         </div>
                     </div>
                 </div>
@@ -131,8 +161,8 @@
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Predictive ML</h4>
-                                    <p class="mb-0 text-white-50">Your data is piped in from the database and is split into training and testing groups for use in our machine learning models. Our unique models will train themselves on the data returned for your vehicle to show you existing trends between owners. If enough of a trend is present, the model will even make a prediction of your credit score. </p>
+                                    <h4 class="text-white">Linear Regression</h4>
+                                    <p class="mb-0 text-white-50">Your user input is used to narrow down our data to include your make and model. Through the utilization of Linear-Regression machine learning models. Our unique models will train themselves to show you a line of best fit for any existing trends between owners' age, gender, and credit score. If enough of a trend is present, the model will even make a prediction of your credit score. </p>
                                     <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
