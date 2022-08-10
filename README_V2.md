@@ -16,7 +16,7 @@ A dashboard was created using JS to help show our users what various combination
 - [**Project Null Hypothesis**](#project-null-hypothesis)
 - [**Method being Used & Technology**](#method-being-used--technology)
 - [**Data Flow Chart**](#data-flow-chart)
-- [**Data & Data Sources**](#data--data-sources)
+- [**Data & Data Sources**](#data-data-sources)
 - [**Machine Learning & Machine Learnings Results**](#machine-learning--machine-learning-results)
 - [**Summary**](#summary)
 
@@ -33,8 +33,6 @@ A dashboard was created using JS to help show our users what various combination
 ![](images/Data_Flowchart.png)
 
 ## Data & Data Sources:
-
-
 ![](images/vehicle_data.png)
 
 ![](images/driver_data.png)
