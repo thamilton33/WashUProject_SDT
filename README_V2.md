@@ -30,12 +30,12 @@ A dashboard was created using JS to help show our users what various combination
 
 ## Data Flow Chart:
 
-![](images/Data_Flowchart.png)
+![](Images/Data_Flowchart.png)
 
 ## Data & Data Sources:
-![](images/vehicle_data.png)
+![](Images/vehicle_data.png)
 
-![](images/driver_data.png)
+![](Images/driver_data.png)
 
 ## Machine Learning & Machine Learning Results:
 tokenized the model to cut down on size of the data. Joined the two data sets together within Postgres. 
