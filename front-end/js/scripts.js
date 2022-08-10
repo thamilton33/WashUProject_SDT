@@ -6,6 +6,21 @@
 //
 // Scripts
 // 
+// function optionChanged(newModel)
+//     // Fetch new data images each time a new sample is selected
+//     var pictureList = [
+//         "http://lorempixel.com/400/200/sports/1",
+//         "http://lorempixel.com/400/200/sports/2",
+//         "http://lorempixel.com/400/200/sports/3",
+//         "http://lorempixel.com/400/200/sports/4",
+//         "http://lorempixel.com/400/200/sports/5", ];
+    
+//     $('#picDD').change(function () {
+//         var val = parseInt($('#picDD').val());
+//         $('img').attr("src",pictureList[val]);
+//     });
+  
+
 
 window.addEventListener('DOMContentLoaded', event => {
 
