@@ -1,0 +1,11 @@
+.jumbotron {
+    background-image: url("./RN_Bacteria.jpg");
+    background-size: 100% 200%;
+    text-align: center;
+    }
+
+body {
+    background-image: url("./Bright-Blue1.jpg");
+    background-size: 100% 100%;
+    text-align: center; 
+}
